@@ -17,4 +17,9 @@ public class ImplServiceUser implements IServiceUser {
     public User findByUsername(String username) {
         return repoUser.findByUsername(username).orElse(null);
     }
+
+    @Override
+    public User save(User user) {
+        return repoUser.save(user);
+    }
 }
